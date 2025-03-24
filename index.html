@@ -2,53 +2,48 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="Home Page for P3 RF Engineering Website">
-        <meta name="keywords" content="Home Page, Engineering, RF engineering, P3, P3 RF Engneering Forms, Engineering, Construction">
-        <meta name="author" content="Evan Page">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CNQRY5YG72"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CNQRY5YG72');
-</script>
-
         <title>Home Page - P3 RF Engineering</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <header>
-        <img src="logo.png" alt="logo for website">
-        <h1><a href="index.html">P3 RF Engineering</a></h1>
+        <div>
+            <h1><a href="index.html">P3 RF Engineering</a></h1>
+        </div>
         <nav>
-            <a href="projects.html">Projects</a>
-            <a href="">About</a>
-            <a href="">Join Us</a>
-            <a href="forms.html">Forms</a>
-            <a href="locations.html">Locations</a>
+            <ul>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Join Us</a></li>
+                <li><a href="forms.html">Forms</a></li>
+                <li><a href="locations.html">Locations</a></li>
+            </ul>
         </nav>
     </header>
+    <body>
+        <img src="images/coverLO.png" class="foreground" alt="shading for image">
+        <img src="images/coverHP.jpg" class="background" alt="home page cover image">
+            <h2 class="text">RF Engineering at its Finest.</h2>
+            <button type="button">About Us</button>
         <main>
-            <div>
-                <img src="images/coverHP.jpg" alt="cover for homepage">
-                <h2>RF Engineering at its Finest.</h2>
-                <button type="button">About Us</button>
-            </div>
-            <div>
-            <div>
-                <p>Welcome</p>
-            </div>
-                <p>Welcome to P3 RF Engineering, where cutting-edge technology meets innovative solutions. As a leader in the field of radio frequency (RF) engineering, we specialize in delivering high-performance, custom-designed systems for industries ranging from telecommunications to defense. Our team of experienced engineers is dedicated to providing reliable, efficient, and scalable RF solutions that meet the unique needs of each project. Whether it’s designing complex RF circuits, optimizing signal processing, or offering tailored consulting services, P3 RF Engineering is your trusted partner in advancing technology to new heights. Explore our services and discover how we can help drive your next project to success.</p>
-            </div>
+                <div class="container">
+                    <div class="sidebar">WELCOME</div>
+                    <div class="content">
+                        <p>
+                           Welcome to P3 RF Engineering, where cutting-edge technology meets innovative solutions. As a leader in the field of radio frequency (RF) engineering, we specialize in delivering high-performance, custom-designed systems for industries ranging from telecommunications to defense. Our team of experienced engineers is dedicated to providing reliable, efficient, and scalable RF solutions that meet the unique needs of each project. Whether it’s designing complex RF circuits, optimizing signal processing, or offering tailored consulting services, P3 RF Engineering is your trusted partner in advancing technology to new heights. Explore our services and discover how we can help drive your next project to success.
+                        </p>
+                    </div>
+                </div>
         </main>
         <footer>
-            <img src="images/linkedin.png" alt="image for embed - linkedin" width="30" height="30">
-            <img src="images/mail.png" alt="image for embed - mail" width="30" height="30">
-            <img src="images/instagram.png" alt="image for embed - instagram" width="30" height="30">
-            <img src="images/facebook.png" alt="image for embed - facebook" width="30" height="30">
-            <h4>Copyright © 2025</h4>
+            <div class="social-icons"></div>
+                <a href="#"><img src="images/linkedin.png" alt="image for embed - linkedin" width="30" height="30"></a>
+                <a href="#"><img src="images/mail.png" alt="image for embed - mail" width="30" height="30"></a>
+                <a href="#"><img src="images/instagram.png" alt="image for embed - instagram" width="30" height="30"></a>
+                <a href="#"><img src="images/facebook.png" alt="image for embed - facebook" width="30" height="30"></a>
+            </div>
+            <div class="copyright">
+                Copyright © 2025
+            </div>
         </footer>
     </body>
 </html>
