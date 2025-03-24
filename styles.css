@@ -29,6 +29,7 @@ nav{
 nav ul li{
     list-style-type: none;
     display: inline-block;
+    text-align: left;
     margin-left: 40px;
 }
     
