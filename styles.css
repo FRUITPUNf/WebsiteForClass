@@ -85,7 +85,7 @@ html,body{
 
 button {
     position: relative;
-    background-color: #0019FF; /* Deep blue */
+    background-color: #0019FF;
     color: white;
     padding: 20px 350px;
     font-size: 16px;
@@ -104,7 +104,7 @@ button {
 }
 
 button:hover {
-    background-color: #000FCC; /* Darker blue on hover */
+    background-color: #000FCC;
 }
 
 main{
