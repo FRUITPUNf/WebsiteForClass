@@ -1,0 +1,623 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6fa;
+  color: #333;
+  height: 100%;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+/* Layout */
+main {
+  flex: 1;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  position: relative;
+  z-index: 10; /* ABOVE hero image */
+  background-color: #001F54A6;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+header h1 a {
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 680px;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.foreground {
+  width: 100%;
+  height: 600px;
+}
+
+.text {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 64px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+/* Buttons */
+button,
+.btn-primary,
+.button1,
+.button2 {
+  background-color: #0013c0;
+  color: white;
+  padding: 14px 40px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+button:hover,
+.btn-primary:hover,
+.button1:hover,
+.button2:hover {
+  background-color: #00076e;
+}
+
+/* Container for Home Page */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.sidebar {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.content {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Image + Text Sections */
+.image-text-container,
+.image-text-container2,
+.flex-section,
+.photo-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.image,
+.image2,
+.photo-section img,
+.flex-section img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.text,
+.text2,
+.photo-text,
+.text-content {
+  flex: 1;
+  min-width: 250px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* Section Headings */
+.section h2 {
+  color: #001F54;
+  margin-bottom: 10px;
+}
+
+footer {
+  background: linear-gradient(90deg, #001F54, #000C33);
+  color: white;
+  padding: 40px 20px 20px;
+  margin-top: 80px;
+  text-align: center;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logo h2 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.footer-logo p {
+  font-size: 14px;
+  color: #cdd4f3;
+  font-style: italic;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.social-icons a img {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.15);
+  filter: brightness(1.3);
+}
+
+footer .copyright {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #b3c0db;
+}
+
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .text {
+    font-size: 36px;
+    top: 120px;
+  }
+
+  .background,
+  .foreground {
+    height: 400px;
+  }
+
+  .button1,
+  .button2 {
+    padding: 14px 40px;
+    width: 80%;
+  }
+
+  .image,
+  .image2 {
+    max-width: 100%;
+  }
+}
+
+.hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 680px;
+  overflow: hidden;
+  margin-top: -105px; /* Pulls image behind the navbar */
+  z-index: 0;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0; /* LOWER than header */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 105px; /* Same as navbar height */
+  height: calc(100% - 80px);
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Transparent black */
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 3;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero-text h2 {
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text button {
+  padding: 16px 80px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.hero-wrapper.hero-short {
+  height: 400px;
+}
+
+.hero-wrapper.hero-short .hero-text h2 {
+  font-size: 48px;
+  margin-top: 0;
+}
+
+/* Projects Page Layout */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card Style Project Layout */
+.project-card {
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-card img {
+  width: 100%;
+  max-width: 500px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 30px;
+  flex: 1;
+}
+
+.project-content h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #001F54;
+}
+
+.project-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.card-button {
+  display: inline-block;
+  background-color: #0019FF;
+  color: white;
+  padding: 12px 32px;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #000FCC;
+}
+
+/* Short Hero for Projects */
+.hero-wrapper.hero-short {
+  height: 400px;
+}
+
+.project-tags {
+  margin-bottom: 15px;
+}
+.tag {
+  display: inline-block;
+  background-color: #e0e7ff;
+  color: #1e3a8a;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 20px;
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+
+.hero-wrapper.hero-slim {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-wrapper.hero-slim::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* Darken background */
+  z-index: 1;
+}
+
+.hero-slim .hero-text {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-slim h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.hero-slim button {
+  padding: 12px 32px;
+  font-size: 16px;
+  border: none;
+  background-color: #0013c0;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-slim button:hover {
+  background-color: #00076e;
+}
+
+/* Slim Hero Wrapper */
+.hero-wrapper.hero-slim {
+  position: relative;
+  height: 300px;
+  background: linear-gradient(to top, #c2c1eb, #003c8f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-wrapper.hero-slim .hero-text {
+  z-index: 2;
+}
+
+.hero-wrapper.hero-slim h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero-wrapper.hero-slim button {
+  padding: 12px 32px;
+  font-size: 16px;
+  border: none;
+  background-color: #0019FF;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-wrapper.hero-slim button:hover {
+  background-color: #000FCC;
+}
+
+/* Office Cards */
+.office-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 40px auto;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
+.office-card {
+  background-color: #f8f9fc;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.office-card:hover {
+  transform: translateY(-5px);
+}
+
+.office-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.office-card h3 {
+  color: #001F54;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.office-card p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Form Container */
+form {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 800px;
+  margin: 50px auto;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  animation: fadeIn 1s ease;
+}
+
+form h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #001F54;
+}
+
+/* Form Inputs */
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="file"],
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #0019FF;
+  outline: none;
+  background: #eef5ff;
+}
+
+/* Button */
+form input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0019FF;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: #000FCC;
+}
+
+/* Footer */
+footer {
+  background-color: #0A1128;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 60px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.9);
+  background: rgba(0, 25, 255, 0.95);
+  color: white;
+  padding: 16px 32px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.popup.show {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+  pointer-events: auto;
+}
+
+
+.hidden {
+  display: none;
+}

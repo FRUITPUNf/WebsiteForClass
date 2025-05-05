@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects - P3 RF Engineering</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+  <div>
+    <h1><a href="index.html">P3 RF Engineering</a></h1>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="aboutUs.html">About</a></li>
+      <li><a href="joinUs.html">Join Us</a></li>
+      <li><a href="forms.html">Forms</a></li>
+      <li><a href="locations.html">Locations</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero-wrapper hero-short">
+  <img src="images/coverPR.jpg" class="hero-bg" alt="Project hero image">
+  <div class="hero-overlay"></div>
+  <div class="hero-text">
+    <h2>Our Projects</h2>
+  </div>
+</section>
+
+<main class="projects-container">
+
+  <div class="project-card">
+    <img src="images/SwanseaHS.jpg" alt="Swansea High School">
+    <div class="project-content">
+      <div class="project-tags">
+        <span class="tag">Education</span>
+        <span class="tag">Infrastructure</span>
+      </div>
+      <h3>Swansea High School</h3>
+      <ul class="project-features">
+        <li>Full RF Mesh Upgrade</li>
+        <li>Seamless Campus Connectivity</li>
+        <li>Secure Backend System</li>
+      </ul>
+      <p>
+        Our team upgraded the entire wireless infrastructure of Swansea High School. We designed and deployed a high-speed RF mesh network to serve hundreds of students and staff reliably.
+      </p>
+      <blockquote class="testimonial">
+        "P3 Engineering completely transformed our wireless experience. Their team was precise, fast, and professional."  
+        <cite>– IT Director, Swansea HS</cite>
+      </blockquote>
+      <a href="#" class="card-button">More Details</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <img src="images/SanctuaryKiawah.jpg" alt="Sanctuary Hotel">
+    <div class="project-content">
+      <div class="project-tags">
+        <span class="tag">Hospitality</span>
+        <span class="tag">Coastal</span>
+      </div>
+      <h3>Sanctuary Hotel - Kiawah</h3>
+      <ul class="project-features">
+        <li>Guest & Staff Wi-Fi</li>
+        <li>Coastal Interference Mitigation</li>
+        <li>Discreet Hardware Integration</li>
+      </ul>
+      <p>
+        We developed a custom RF solution that blends seamlessly into the architecture of this luxury coastal resort. Staff and guest systems are independently secured and performance-optimized.
+      </p>
+      <blockquote class="testimonial">
+        "They nailed every detail — from signal strength to aesthetic integration. It’s invisible, but essential."  
+        <cite>– General Manager, Sanctuary Kiawah</cite>
+      </blockquote>
+      <a href="#" class="card-button">More Details</a>
+    </div>
+  </div>
+
+</main>
+
+<button id="backToTop">↑ Top</button>
+
+<footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h2>P3 RF Engineering</h2>
+        <p>Innovating wireless. Engineering the future.</p>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://mail.google.com/"><img src="images/mail.png" alt="Mail"></a>
+        <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook"></a>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2025 P3 RF Engineering. All rights reserved.
+    </div>
+  </footer>
+
+<script>
+  const cards = document.querySelectorAll('.project-card');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  });
+  cards.forEach(card => observer.observe(card));
+
+  const backToTop = document.getElementById('backToTop');
+  window.onscroll = () => {
+    backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+  };
+  backToTop.onclick = () =>
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+</script>
+
+</body>
+</html>
